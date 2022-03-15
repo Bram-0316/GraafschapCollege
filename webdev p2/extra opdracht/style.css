@@ -1,0 +1,33 @@
+.container{
+    width: 1024px;
+    height: 768px;
+    background-color: yellow;
+    display:flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+h1{
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+}
+.menu{
+flex-direction: row;
+width: 1000px;
+height: 100px;
+background-color: grey;
+justify-content: flex-end;
+}
+a{
+    text-decoration: none;
+    color: lightblue;
+}
+li{
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0px;
+    padding: 0px;
+}

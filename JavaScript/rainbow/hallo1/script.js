@@ -1,0 +1,1 @@
+var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]; var rainbow = []; for (var i = 0; i < colors.length; i++) { rainbow.push(colors[i]); } rainbow.sort(); console

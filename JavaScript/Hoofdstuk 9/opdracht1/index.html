@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 1</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="opdracht1.js"></script>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .tekstBox {
+            border: 1px solid black;
+            width: 175px;
+            height: 150px;
+            margin-top:5px;
+            background-color: white;
+        }
+    </style>
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+<body>
+    <div id="selectie">
+        <input type="radio" value="1" name="selectie" id="voorgrond">
+        <label>Voorgrond</label>
+
+        <input type="radio" value="2" name="selectie" id="achtergrond">
+        <label>Achtergrond</label>
+
+        <input type="radio" value="3" name="selectie" id="tekst">
+        <label>Tekst</label>
+
+        <input type="radio" value="4" name="selectie" id="breedte">
+        <label>breedte</label>
+
+        <input type="radio" value="5" name="selectie" id="hoogte">
+        <label>hoogte</label>
+    </div>
+
+
+    <input id="input"></input>
+    <button>Stel in</button>
+
+    <div class="tekstBox" id="tekstVak">
+        Voorbeeld tekst
+    </div>
+</body>
+</html>

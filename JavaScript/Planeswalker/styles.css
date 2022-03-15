@@ -1,0 +1,22 @@
+ 
+
+.button-loyalty{
+    width: 33px;
+    height: 23px;
+    margin: 0 18px 5px 0;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 90px;
+}
+.card-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 300px;
+    height: 400px;
+    background-image: url(assets/teferi_who_slows_the_sunset_9063459_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

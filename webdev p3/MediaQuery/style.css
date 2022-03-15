@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+}
+
+/* General styling */
+.container{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.btn-primary{
+    background-color: lightblue;
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.btn-secondary{
+    background-color: rgb(92, 92, 92);
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navbar */
+nav{
+    background-color: rgb(236, 236, 236);
+    padding: 20px 0px;
+}
+
+.logo img{
+    max-height: 70px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0px;
+}
+
+.menu li{
+    margin: 10px 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.menu li a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero image */
+.hero{
+    min-height: 300px;
+    background-image: url('img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.hero .heroContent{
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.hero .heroContent p{
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* Projects */
+.project{
+    display: flex;
+    flex-direction: column;
+}
+.projects{
+    padding: 20px 0px;
+}
+
+.projects h2{
+    margin: 20px 0px;
+    width: 21%;
+}
+
+.projects .projectList .project{
+    margin: 20px 0px;
+    padding: 20px;
+    border: 2px solid gray;
+    width: 21%;
+    display: inline-block;
+}
+
+.projects .projectList .project img{
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.projects .projectList .project h3{
+    margin: 10px 0px;
+    width: 21%;
+}
+/* About us */
+.aboutUs{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 20px 0px;
+}
+.aboutUs h2{
+    margin: 20px 0px;
+}
+
+.aboutUs .aboutUsList .person{
+    margin: 20px 0px;
+    padding: 20px;
+    border: 2px solid gray;
+    width: 21%;
+    display: inline-block;
+}
+
+.aboutUs .aboutUsList .person img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.aboutUs .aboutUsList .person h3{
+    margin: 10px 0px;
+}
+.person{
+    display: flex;
+    flex-direction: column;
+}

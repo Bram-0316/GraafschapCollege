@@ -1,0 +1,1 @@
+let random = math.random(1)*100
