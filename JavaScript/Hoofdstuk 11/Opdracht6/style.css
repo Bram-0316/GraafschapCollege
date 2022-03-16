@@ -1,0 +1,8 @@
+.box{
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    background-color: hotpink;
+    top: 50px;
+    left: 50px;
+}

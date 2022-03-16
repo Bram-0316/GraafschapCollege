@@ -1,0 +1,10 @@
+.divResult{
+    height: 100px;
+    width: 150px;
+    position:absolute;
+}
+body{
+    background-image: url(WIN_20211201_12_41_52_Pro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
