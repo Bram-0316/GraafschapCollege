@@ -26,6 +26,7 @@ require '../config/database.php';
             <li><a href="<?php echo PUBLIC_PATH;?>/">Home</a></li>
             <li><a href="<?php echo PUBLIC_PATH;?>/PreBuilds.php">Prebuilds</a></li>
             <li><a href="<?php echo PUBLIC_PATH;?>/Custom.php">Custom</a></li>
+            <li><a href="<?php echo PUBLIC_PATH;?>/inlog.php">Log In</a></li>
             <li><a href="<?php echo PUBLIC_PATH;?>/registreren.php">Registreren</a></li>
         </ul>
     </div>

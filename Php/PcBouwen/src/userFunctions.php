@@ -1,8 +1,8 @@
 <?php
 require_once "databaseFunctions.php";
 
-function registerUser($firstname, $lastname, $email, $password){
-    $result = db_insertData("INSERT INTO users (email, firstname, lastname, password) VALUES ('$email', '$firstname', '$lastname', '$password' )");
+function registerUser($username, $password, $email){
+    $result = db_insertData("INSERT INTO accounts (username, password, email) VALUES ('$username', '$password', '$email' )");
     return $result;
 }
 function getUser($email, $password){

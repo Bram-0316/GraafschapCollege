@@ -1,7 +1,7 @@
 <?php
 require_once ('../config/database.php');
 function db_connect(){
-    $mysqli = new mysqli(localhost, root, "",pcbouwen);
+    $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     return $mysqli;
 
 }

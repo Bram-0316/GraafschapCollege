@@ -4,10 +4,11 @@ require_once('../src/userFunctions.php');
 
 // check for user registration
 $newUser = null;
-if (isset($_POST['register'])){ 
-    $newUser = registerUser($_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password']);
-}
+if (isset($_POST['register'])){
+    $newUser = registerUser($_POST['username'], $_POST['password'], $_POST['email']);
 
+    header("Location: inlog.php");
+}
 ?>
     <div class="page registreren">
         <div class="container">
@@ -17,23 +18,19 @@ if (isset($_POST['register'])){
             <?php }else{?> -->
            <form action="#" method="post">
                <div class="inputRow">
-                   <label for="username">Voornaam</label>
-                   <input type="text" name="username">
+                   <label for="firstName">Username</label>
+                   <input type="text" name="username" required>
                </div>
-               <!-- <div class="inputRow">
-                   <label for="lastName">Achternaam</label>
-                   <input type="text" name="lastName">
-               </div> -->
                <div class="inputRow">
                    <label for="email">Email</label>
-                   <input type="text" name="email">
+                   <input type="email" name="email" required>
                </div>
                <div class="inputRow">
                    <label for="password">Wachtwoord</label>
-                   <input type="password" name="password">
+                   <input type="password" name="password" required>
                </div>
                <div class="inputRow">
-                   <input type="submit" name="register" value="Registreer">
+                   <input type="submit" name="register" value="Registreer" onclick="wps_registration_redirect();" >
                </div>
            </form>
             <?php } ?>
