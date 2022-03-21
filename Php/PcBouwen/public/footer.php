@@ -3,9 +3,9 @@
         <div class="container">
             <div class="column column1">
                 <h3>Contact</h3>
-                <p>Adres: Graafschap College</p>
+                <p>Adres: Overal en nergens</p>
                 <p>Telefoon: 06-12345678</p>
-                <p>Email: john@doe.nl</p>
+                <p>Email: Bram.boudewijn@student.graafschapcollege.nl</p>
             </div>
             <div class="column column2">
                 <h3>Links</h3>
