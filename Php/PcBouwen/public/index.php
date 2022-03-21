@@ -13,6 +13,17 @@ require_once ('header.php');
 </div>
 
 
+<section class="hero">
+    <div class="content">
+        <h1>PCWinkel.nl</h1>
+        <p>Kies tussen een van onze Prebuilds of bouw zelf je droom pc!</p>
+        <div class="btn-group">
+        <a href="<?php echo PUBLIC_PATH;?>/PreBuilds.php"" class="btn-primary">Prebuilds</a>
+            <a href="<?php echo PUBLIC_PATH;?>/Custom.php"" class="btn-secondary">Custom pc's</a>
+        </div>
+    </div>
+</section>
+
 <?php
 
 require_once ('footer.php');

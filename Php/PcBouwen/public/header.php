@@ -33,15 +33,5 @@ require '../config/database.php';
 </nav>
 <!-- End navigation -->
 <!-- Start hero image -->
-<!-- <section class="hero">
-    <div class="content">
-        <h1>Welkom op het GC Festival!</h1>
-        <p>Bestel tickets of bekijk de line-up van het festival</p>
-        <div class="btn-group">
-        <a href="<?php echo PUBLIC_PATH;?>/tickets.php"" class="btn-primary">Ticket kopen</a>
-            <a href="<?php echo PUBLIC_PATH;?>/lineup.php"" class="btn-secondary">Bekijk Line-up</a>
-        </div>
-    </div>
 
-</section> -->
-<!-- End hero image -->
+<!-- End hero image
