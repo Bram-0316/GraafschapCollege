@@ -71,7 +71,7 @@ nav ul.menu li a{
 section.hero{
     height: 400px;
     width: 100%;
-    background-image: url("../images/header.jpg");
+    background-image: url("images/header.png");
     background-size: cover;
     background-position: bottom;
     display: flex;

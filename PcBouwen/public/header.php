@@ -11,7 +11,7 @@ require '../config/database.php';
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pc Bouwen</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="<?php echo PUBLIC_PATH;?>/assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -33,5 +33,15 @@ require '../config/database.php';
 </nav>
 <!-- End navigation -->
 <!-- Start hero image -->
+<section class="hero">
+    <div class="content">
+        <h1>Welkom op het GC Festival!</h1>
+        <p>Bestel tickets of bekijk de line-up van het festival</p>
+        <div class="btn-group">
+        <a href="<?php echo PUBLIC_PATH;?>/tickets.php"" class="btn-primary">Ticket kopen</a>
+            <a href="<?php echo PUBLIC_PATH;?>/lineup.php"" class="btn-secondary">Bekijk Line-up</a>
+        </div>
+    </div>
 
+</section>
 <!-- End hero image
