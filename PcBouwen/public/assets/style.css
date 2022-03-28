@@ -72,8 +72,8 @@ section.hero{
     height: 400px;
     width: 100%;
     background-image: url("images/header.png");
-    background-size: cover;
-    background-position: bottom;
+    background-size: inherit;
+    /* background-position: bottom; */
     display: flex;
     justify-content: center;
     align-content: center;
@@ -101,19 +101,7 @@ section.hero .btn-group a{
     padding: 60px 0px;
 }
 
-/* Line up page */
-.lineup .artists{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.lineup .artists .artist img{
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-}
 
 /* Input styling */
 .inputRow{

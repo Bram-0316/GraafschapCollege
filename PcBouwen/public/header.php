@@ -35,13 +35,13 @@ require '../config/database.php';
 <!-- Start hero image -->
 <section class="hero">
     <div class="content">
-        <h1>Welkom op het GC Festival!</h1>
-        <p>Bestel tickets of bekijk de line-up van het festival</p>
+        <h1>PCWinkel.nl</h1>
+        <p>De beste prijzen van heel NL en BE</p>
         <div class="btn-group">
-        <a href="<?php echo PUBLIC_PATH;?>/tickets.php"" class="btn-primary">Ticket kopen</a>
-            <a href="<?php echo PUBLIC_PATH;?>/lineup.php"" class="btn-secondary">Bekijk Line-up</a>
+        <a href="<?php echo PUBLIC_PATH;?>/PreBuilds.php"" class="btn-primary">Prebuilds</a>
+            <a href="<?php echo PUBLIC_PATH;?>/Custom.php"" class="btn-secondary">Custom pc's</a>
         </div>
     </div>
 
 </section>
-<!-- End hero image
+<!-- End hero image -->

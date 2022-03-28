@@ -1,15 +1,27 @@
-.container{
+body{
+    Background: linear-gradient(110deg, #f93d66, #6d47d9);
     font-family: Arial;
     font-weight: bold;
     text-align: center;
-    Background: linear-gradient(110deg, #f93d66, #6d47d9);
-} 
+}
 header {
     font-family: Arial;
     font-weight: bold;
     text-align: center;
-    Background: linear-gradient(110deg, #f93d66, #6d47d9);
 }
-.hoi{
-    background-image: url(images/header_afbeelding.jpg)
+.mainheader{
+    /* border: 5px solid red; */
+    background-image: url(images/header_afbeelding.jpg);
+    height: 305px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+.beer,.wine,.taco,.music{
+    background-color: white;
+    /* border: 3px solid green; */
+    width: 500px;
+    margin-left: 15px;
+    padding: 0 !important;
+    margin-right: 15px;
+}
+
