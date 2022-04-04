@@ -13,13 +13,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        #username, #password{
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
 <div class="login">
 			<h1>Login</h1>
-			<form class="" action="" method="post">
+			<form class="Login" action="#" method="post">
 				<label for="username">
 					<i class="fas fa-user"></i>
 				</label>
@@ -47,13 +49,20 @@ if ( mysqli_connect_errno() ) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-if ( !isset($_POST['username'], $_POST['password']) ) {
-	// Could not get the data that should have been sent.
-	exit('Please fill both the username and password fields!');
+$username = "";
+
+
+if(isset($_POST["username"])){
+    $username = $_POST['username'];
 }
-if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+
+// if ( !isset($_POST['username'], $_POST['password']) ) {
+// 	// Could not get the data that should have been sent.
+// 	exit('Please fill both the username and password fields!');
+// }
+if ($stmt = $con->prepare("SELECT id, password FROM accounts WHERE username = '" . $username . "'")) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
-	$stmt->bind_param('s', $_POST['username']);
+	// $stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
 	// Store the result so we can check if the account exists in the database.
 	$stmt->store_result();
@@ -61,13 +70,14 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
         $stmt->bind_result($id, $password);
         $stmt->fetch();
 
-		$hashed = $con->query("SELECT password FROM accounts WHERE username = ?");
-		$hashed_password = strval($hashed);
+		// $hashed = $con->query("SELECT password FROM `accounts` WHERE `username` = '" . $username . "'");
+		$hashed_password = current($con->query("SELECT password FROM `accounts` WHERE `username` = '" . $username . "'")->fetch_assoc());
         // Account exists, now we verify the password.
         // Note: remember to use password_hash in your registration file to store the hashed passwords.
         if (password_verify($_POST['password'] , $hashed_password)) { 
             // Verification success! User has logged-in!
             // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
+            session_start();
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
@@ -77,7 +87,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             // Incorrect password
             echo 'Incorrect username and/or password!';
         }
-    } else {
+    } elseif (isset($_POST['username'], $_POST['password'])){
         // Incorrect username
         echo 'Incorrect username and/or password!';
     }

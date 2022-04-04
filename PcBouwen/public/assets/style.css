@@ -162,3 +162,10 @@ footer .container .column li a{
     text-decoration: none;
     margin: 10px 0px;
 }
+
+
+/* Log in */
+
+#username, #password{
+    padding: 10px;
+}
