@@ -3,6 +3,11 @@ require_once "header.php";
 require_once ('../src/databaseFunctions.php');
 require_once ('../src/userFunctions.php');
 $behuizingen = db_getData('SELECT * FROM `componenten` WHERE `Type` = "Behuizing"');
+$CPUS = db_getData('SELECT * FROM `componenten` WHERE `Type` = "CPU"');
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +27,16 @@ $behuizingen = db_getData('SELECT * FROM `componenten` WHERE `Type` = "Behuizing
                 <option value=""><?php echo $behuizing['Merk'] ." ". $behuizing['Serie']  ." ". $behuizing['Kleur'] ." - €". $behuizing['Prijs'];?></option>
             <?php } ?>
         </select>
+            <br>
+        <select name="Select">
+            <?php
+                while($CPU = $CPUS->fetch_assoc()){
+            ?>
+                <option value=""><?php echo $CPU['Merk'] ." ". $CPU['Serie']  ." ". $CPU['Eigenschappen'] ." - €". $CPU['Prijs'];?></option>
+            <?php } ?>
+        </select>
+        
+
 </body>
 </html>
 
