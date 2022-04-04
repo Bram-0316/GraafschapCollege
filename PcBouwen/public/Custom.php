@@ -19,7 +19,7 @@ $behuizingen = db_getData('SELECT * FROM `componenten` WHERE `Type` = "Behuizing
             <?php
                 while($behuizing = $behuizingen->fetch_assoc()){
             ?>
-                <option value=""><?php echo $behuizing['Merk'] ." ". $behuizing['Serie']  ." ". $behuizing['Kleur'] ." ". $behuizing['Prijs'];?></option>
+                <option value=""><?php echo $behuizing['Merk'] ." ". $behuizing['Serie']  ." ". $behuizing['Kleur'] ." - €". $behuizing['Prijs'];?></option>
             <?php } ?>
         </select>
 </body>

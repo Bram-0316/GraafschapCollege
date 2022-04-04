@@ -19,7 +19,7 @@
 <body>
 <div class="login">
 			<h1>Login</h1>
-			<form class="" action="" method="post">
+			<form class="" action="#" method="post">
 				<label for="username">
 					<i class="fas fa-user"></i>
 				</label>
@@ -41,7 +41,7 @@
 			$DATABASE_PASS = '';
 			$DATABASE_NAME = 'pcbouwen';
 // Try and connect using the info above.
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+$connection = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if ( mysqli_connect_errno() ) {
 	// If there is an error with the connection, stop the script and display the error.
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
@@ -51,7 +51,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 	// Could not get the data that should have been sent.
 	exit('Please fill both the username and password fields!');
 }
-if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+if ($stmt = $connection->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
@@ -61,7 +61,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
         $stmt->bind_result($id, $password);
         $stmt->fetch();
 
-		$hashed = $con->query("SELECT password FROM accounts WHERE username = ?");
+		$hashed = $connection->query('SELECT password FROM accounts WHERE username = ?');
 		$hashed_password = strval($hashed);
         // Account exists, now we verify the password.
         // Note: remember to use password_hash in your registration file to store the hashed passwords.
