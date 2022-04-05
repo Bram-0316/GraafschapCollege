@@ -9,6 +9,9 @@ require_once ('header.php');
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias assumenda illum voluptas praesentium consequatur nisi incidunt, vero adipisci? Voluptatum cum itaque omnis culpa quia aperiam.</p>
 </div>
 
+
+<a href="logout.php">hallo</a>
+
 <?php
 
 require_once ('footer.php');

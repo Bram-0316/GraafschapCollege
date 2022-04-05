@@ -5,8 +5,14 @@ require_once ('../src/userFunctions.php');
 $behuizingen = db_getData('SELECT * FROM `componenten` WHERE `Type` = "Behuizing"');
 $CPUS = db_getData('SELECT * FROM `componenten` WHERE `Type` = "CPU"');
 
+session_start();
 
-
+if ($_SESSION['loggedin'] === TRUE) {
+    echo 'hoi ' . $_SESSION['name'];
+}
+elseif ($_SESSION['loggedin'] === FALSE) {
+    echo 'log in eerst ';
+}
 
 ?>
 <!DOCTYPE html>
