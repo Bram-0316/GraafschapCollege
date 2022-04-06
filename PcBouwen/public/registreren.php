@@ -34,7 +34,12 @@ if (isset($_POST['register'])){
                </div>
            </form>
             <?php } ?>
+
+                
+
+
         </div>
+
     </div>
     <?php
     require_once 'footer.php';

@@ -1,7 +1,11 @@
-<!-- <?php
+<?php
 require '../config/config.php';
 require '../config/database.php';
-?> -->
+    SESSION_START();
+    if (isset($_SESSION['loggedin']) || $_SESSION['loggedin'] = true){
+        echo "";
+    }
+?>
 
 <!doctype html>
 <html lang="en">
@@ -24,9 +28,8 @@ require '../config/database.php';
         <ul class="menu">
         
             <li><a href="<?php echo PUBLIC_PATH;?>/">Home</a></li>
-            <li><a href="<?php echo PUBLIC_PATH;?>/PreBuilds.php">Prebuilds</a></li>
             <li><a href="<?php echo PUBLIC_PATH;?>/Custom.php">Custom</a></li>
-            <li><a href="<?php echo PUBLIC_PATH;?>/inlog.php">Log In</a></li>
+            <li><a id="login" href="<?php if ($_SESSION['loggedin'] === TRUE) {echo 'logout.php';}   elseif ($_SESSION['loggedin'] === FALSE) {echo 'inlog.php';} ?> "> <?php if ($_SESSION['loggedin'] === TRUE) {echo 'Log Out';}elseif ($_SESSION['loggedin'] === FALSE) {echo 'Log In';} ?></a></li>
             <li><a href="<?php echo PUBLIC_PATH;?>/registreren.php">Registreren</a></li>
         </ul>
     </div>
@@ -38,10 +41,11 @@ require '../config/database.php';
         <h1>PCWinkel.nl</h1>
         <p>De beste prijzen van heel NL en BE</p>
         <div class="btn-group">
-        <a href="<?php echo PUBLIC_PATH;?>/PreBuilds.php"" class="btn-primary">Prebuilds</a>
+        <a href="<?php echo PUBLIC_PATH;?>/registreren.php" class="btn-primary">Registreren</a>
             <a href="<?php echo PUBLIC_PATH;?>/Custom.php"" class="btn-secondary">Custom pc's</a>
         </div>
     </div>
 
-</section>
+</section> 
+
 <!-- End hero image -->
