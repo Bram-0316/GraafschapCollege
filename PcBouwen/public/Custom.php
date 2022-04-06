@@ -10,7 +10,10 @@ $RAMS = db_getData('SELECT * FROM `componenten` WHERE `Type` = "RAM"');
 $GPUS = db_getData('SELECT * FROM `componenten` WHERE `Type` = "GPU"');
 $Moederborden = db_getData('SELECT * FROM `componenten` WHERE `Type` = "Motherboard"');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 867ba05ac8b571db2b03882527892597cc272d4c
 
 if ($_SESSION['loggedin'] === FALSE) {
     header("Location: inlog.php");
@@ -183,6 +186,7 @@ select:focus {
 
                     <input name="submit" type="submit">   
                 </form>
+        <br>
 
         <br>            
     </div>
