@@ -10,19 +10,9 @@ $RAMS = db_getData('SELECT * FROM `componenten` WHERE `Type` = "RAM"');
 $GPUS = db_getData('SELECT * FROM `componenten` WHERE `Type` = "GPU"');
 $Moederborden = db_getData('SELECT * FROM `componenten` WHERE `Type` = "Motherboard"');
 
-session_start();
-
-<<<<<<< HEAD
 
 if ($_SESSION['loggedin'] === FALSE) {
     header("Location: inlog.php");
-=======
-if ($_SESSION['loggedin'] === TRUE) {
-    echo 'hoi ' . $_SESSION['name'];
-}
-elseif ($_SESSION['loggedin'] === FALSE) {
-    echo 'log in eerst ';
->>>>>>> 937ec040f2490e6917fe638b1eb9ea09b6516b59
 }
 
 ?>
@@ -132,66 +122,67 @@ select:focus {
     <h1>Custom builds</h1>
     <div class="border">
     <div class="select">
-        <form method="post" action="#"> 
-        <select name="ComponentSelect">
+    <form method="post" action="#"> 
+        <select name="behuizing">
             <?php
                 while($behuizing = $behuizingen->fetch_assoc()){
             ?>
-                <option value="1"><?php echo $behuizing['Merk'] ." ". $behuizing['Serie']  ." ". $behuizing['Kleur'] ." - €". $behuizing['Prijs'];?></option>
+                <option value="<?php echo $behuizing['Serie'] . " " .  $behuizing['Merk']; ?>"><?php echo $behuizing['Merk'] ." ". $behuizing['Serie']  ." ". $behuizing['Kleur'] ." - €". $behuizing['Prijs'];?></option>
             <?php } ?>
             
         </select>
             <br>
-        <select name="Select">
+        <select name="cpu">
             <?php
                 while($CPU = $CPUS->fetch_assoc()){
             ?>
-                <option value="2"><?php echo $CPU['Merk'] ." ". $CPU['Serie']  ." ". $CPU['Eigenschappen'] ." - €". $CPU['Prijs'];?></option>
+                <option value="<?php echo $CPU['Serie'] . " " . $CPU['Merk']; ?>"><?php echo $CPU['Merk'] ." ". $CPU['Serie']  ." ". $CPU['Eigenschappen'] ." - €". $CPU['Prijs'];?></option>
             <?php } ?>
         </select>
         <br>
-        <select name="Select">
+        <select name="psu">
             <?php
                 while($psu = $psuS->fetch_assoc()){
             ?>
-                <option value="3"><?php echo $psu['Merk'] ." ". $psu['Serie']  ." ". $psu['Kleur'] ." - €". $psu['Prijs'];?></option>
+                <option value="<?php echo $psu['Serie'] . " " . $psu['Merk']; ?>"><?php echo $psu['Merk'] ." ". $psu['Serie']  ." ". $psu['Kleur'] ." - €". $psu['Prijs'];?></option>
             <?php } ?>
         </select>
         <br>
-        <select name="Select">
+        <select name="cooling">
             <?php
                 while($Cooling = $Coolingen->fetch_assoc()){
             ?>
-                <option value=""><?php echo $Cooling['Merk'] ." ". $Cooling['Serie']   ." ".  $Cooling['Kleur'] ." ". $Cooling['Eigenschappen'] ." - €". $Cooling['Prijs'];?></option>
+                <option value="<?php echo $Cooling['Serie'] . " " . $Cooling['Merk']; ?>"><?php echo $Cooling['Merk'] ." ". $Cooling['Serie']   ." ".  $Cooling['Kleur'] ." ". $Cooling['Eigenschappen'] ." - €". $Cooling['Prijs'];?></option>
             <?php } ?>
         </select>
         <br>
-        <select name="Select">
+        <select name="ram">
             <?php
                 while($RAM = $RAMS->fetch_assoc()){
             ?>
-                <option value=""><?php echo $RAM['Merk'] ." ". $RAM['Serie'] ." ". $RAM['Kleur']  ." ". $RAM['Eigenschappen'] ." - €". $RAM['Prijs'];?></option>
+                <option value="<?php echo $RAM['Serie'] . " " . $RAM['Merk'] . " " . $RAM['Eigenschappen']; ?>"><?php echo $RAM['Merk'] ." ". $RAM['Serie'] ." ". $RAM['Kleur']  ." ". $RAM['Eigenschappen'] ." - €". $RAM['Prijs'];?></option>
             <?php } ?>
         </select>
         <br>
-        <select name="Select">
+        <select name="gpu">
             <?php
                 while($GPU = $GPUS->fetch_assoc()){
             ?>
-                <option value=""><?php echo $GPU['Merk'] ." ". $GPU['Serie']  ." ". $GPU['Eigenschappen'] ." - €". $GPU['Prijs'];?></option>
+                <option value="<?php echo $GPU['Serie'] . " " . $GPU['Merk']; ?>"><?php echo $GPU['Merk'] ." ". $GPU['Serie']  ." ". $GPU['Eigenschappen'] ." - €". $GPU['Prijs'];?></option>
             <?php } ?>
         </select>
         <br>
-        <select name="Select">
+        <select name="moederbord">
             <?php
                 while($Moederbord = $Moederborden->fetch_assoc()){
             ?>
-                <option value=""><?php echo $Moederbord['Merk'] ." ". $Moederbord['Serie']  ." ". $Moederbord['Eigenschappen'] ." - €". $Moederbord['Prijs'];?></option>
+                <option value="<?php echo $Moederbord['Serie'] . " " . $Moederbord['Merk']; ?>"><?php echo $Moederbord['Merk'] ." ". $Moederbord['Serie']  ." ". $Moederbord['Eigenschappen'] ." - €". $Moederbord['Prijs'];?></option>
             <?php } ?> 
         </select>
 
                     <input name="submit" type="submit">   
                 </form>
+        <br>
 
         <br>            
     </div>
@@ -210,8 +201,10 @@ select:focus {
 
 <?php
 
+
 if(isset($_POST['submit'])){
-    mail("Bramboudewijn2004@gmail.com", "Order", "Test123", "From: pcwinkel123@gmail.com");
+    $mailcontent = $_POST['cpu'] . ' | ' . $_POST['behuizing'] .  ' | ' . $_POST['gpu'] . ' | ' . $_POST['ram'] . ' | ' . $_POST['cooling'] .  ' | ' . $_POST['psu'] . ' | ' . $_POST['moederbord'];
+    mail("Bramboudewijn2004@gmail.com", "Order", $mailcontent, "From: pcwinkel123@gmail.com");
 }
 
 require_once "footer.php";
