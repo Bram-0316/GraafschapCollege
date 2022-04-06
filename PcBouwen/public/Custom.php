@@ -10,10 +10,19 @@ $RAMS = db_getData('SELECT * FROM `componenten` WHERE `Type` = "RAM"');
 $GPUS = db_getData('SELECT * FROM `componenten` WHERE `Type` = "GPU"');
 $Moederborden = db_getData('SELECT * FROM `componenten` WHERE `Type` = "Motherboard"');
 
+session_start();
 
+<<<<<<< HEAD
 
 if ($_SESSION['loggedin'] === FALSE) {
     header("Location: inlog.php");
+=======
+if ($_SESSION['loggedin'] === TRUE) {
+    echo 'hoi ' . $_SESSION['name'];
+}
+elseif ($_SESSION['loggedin'] === FALSE) {
+    echo 'log in eerst ';
+>>>>>>> 937ec040f2490e6917fe638b1eb9ea09b6516b59
 }
 
 ?>
