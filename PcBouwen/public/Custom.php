@@ -123,7 +123,7 @@ select:focus {
     <h1>Custom builds</h1>
     <div class="border">
     <div class="select">
-        <form method="post" action="#"> 
+        <form method="post" action="Thankyou.php"> 
         <select name="behuizing">
             <?php
                 while($behuizing = $behuizingen->fetch_assoc()){
@@ -202,12 +202,8 @@ select:focus {
 <?php
 
 
-if(isset($_POST['cpu'])){
-    $mailcontent = $_POST['cpu'] . ' | ' . $_POST['behuizing'] .  ' | ' . $_POST['gpu'] . ' | ' . $_POST['ram'] . ' | ' . $_POST['cooling'] .  ' | ' . $_POST['psu'] . ' | ' . $_POST['moederbord'];
-}
-
-
 if(isset($_POST['submit'])){
+    $mailcontent = $_POST['cpu'] . ' | ' . $_POST['behuizing'] .  ' | ' . $_POST['gpu'] . ' | ' . $_POST['ram'] . ' | ' . $_POST['cooling'] .  ' | ' . $_POST['psu'] . ' | ' . $_POST['moederbord'];
     mail("Bramboudewijn2004@gmail.com", "Order", $mailcontent, "From: pcwinkel123@gmail.com");
 }
 

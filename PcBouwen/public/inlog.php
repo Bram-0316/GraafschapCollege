@@ -7,7 +7,6 @@
         header("Location: index.php");
     }
 
-        session_start();
     ?> 
 
 
