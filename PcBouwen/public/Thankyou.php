@@ -21,6 +21,10 @@ require_once ('header.php');
             text-decoration: underline;
             color: blue;
         }
+        .page{
+ transform:translatex(736px) translatey(0px);
+}
+
     </style>
 
 
