@@ -101,6 +101,15 @@ section.hero .btn-group a{
     padding: 60px 0px;
 }
 
+.page h1{
+    text-align:center;
+}
+   
+   /* Paragraph */
+.page p{
+    text-align:center;
+}
+   
 .loginform{
     
 }
@@ -169,3 +178,35 @@ footer .container .column li a{
 #username, #password{
     padding: 10px;
 }
+
+
+/* Register User*/
+.registreren form{
+    transform:translatex(454px) translatey(-12px);
+    z-index:-10;
+}
+   
+   /* Input */
+.registreren form input{
+    transform:translatex(153px) translatey(-6px);
+   }
+   
+   /* Input */
+.registreren form input[type=email]{
+    transform:translatex(43px) translatey(-3px);
+    width:250px;
+}
+   
+   /* Input */
+.registreren form input[type=text]{
+    transform:translatex(43px) translatey(0px);
+    width:250px;
+}
+   
+   /* Input */
+.registreren form input[type=password]{
+    transform:translatex(43px) translatey(-3px);
+    width:250px;
+}
+   
+   
