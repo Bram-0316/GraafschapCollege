@@ -10,6 +10,14 @@ if (isset($_POST['register'])){
     header("Location: inlog.php");
 }
 ?>
+<style>
+.registreren h1{
+    transform:translatex(-66px) translatey(-35px);
+}
+.registreren .container h1{
+    width:39% !important;
+}  
+</style>
     <div class="page registreren">
         <div class="container">
             <h1>Registreren</h1>

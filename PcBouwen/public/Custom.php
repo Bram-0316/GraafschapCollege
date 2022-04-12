@@ -11,7 +11,6 @@ $GPUS = db_getData('SELECT * FROM `componenten` WHERE `Type` = "GPU"');
 $Moederborden = db_getData('SELECT * FROM `componenten` WHERE `Type` = "Motherboard"');
 
 
-
 if ($_SESSION['loggedin'] === FALSE) {
     header("Location: inlog.php");
 }
