@@ -17,4 +17,4 @@ require_once ('header.php');
 
 require_once ('footer.php');
 
-?>
+// make a log in form with username and password required and check if the password is the same hash as the database password Ow yeah and also make everything centerd in the page
