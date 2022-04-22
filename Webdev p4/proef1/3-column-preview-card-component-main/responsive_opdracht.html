@@ -14,20 +14,20 @@
     .sedans>button {color: #E28625;}
     .suvs>button {color: #006971;}
     .luxery>button {color: #004140;}
-    .container {width: 229px;height: 1294px; display: flex; justify-content: center; flex-direction: column}
-    .sedans , .suvs , .luxery {transition: width 1s;transition: height 1s;transition: margin 1s;width: 229px;height: 344px; padding: 49px;border-radius: 10px;display: flex;flex-direction: column;justify-content: space-around;}
+    .container {width: 327px;height: 1294px;margin: auto;}
+    .sedans , .suvs , .luxery {transition: width 1s;transition: height 1s;transition: margin 1s;width: 229px;height: 344px;position: absolute;padding: 49px;border-radius: 10px;display: flex;flex-direction: column;justify-content: space-around;}
     .sedans {background-color: #E28625;}
-    .suvs {background-color: #006971; transform: translateY(-14px)}
-    .luxery {background-color: #004140; transform: translateY(-28px)}
-    @media screen and (min-width: 981px) 
+    .suvs {background-color: #006971;margin-top: 426px;}
+    .luxery {background-color: #004140;margin-top: 852px;}
+    @media screen and (min-width: 889px) 
     {
-      .container {min-width: 889px; width: auto; height: 442px; display: flex; flex-direction: row; justify-content: center; align-items: center;}
-      .sedans , .suvs , .luxery {min-width:209 ;max-width: 307px;max-height: 402px; float: left;}
-      .suvs {margin-top: 0; transform: translateX(-14px);}
-      .luxery {margin-top: 0; transform: translateY(0px) translateX(-28px);}
-      .sedans>button:hover {color: white;background-color: #E28625;border: 2px solid white;}
-      .suvs>button:hover {color: white;background-color: #006971;border: 2px solid white;}
-      .luxery>button:hover {color: white;background-color: #004140;border: 2px solid white;}
+      .container {width: 889px;height: 500px;}
+      .sedans , .suvs , .luxery {width: 209px;height: 402px;}
+      .suvs {margin-top: 0;margin-left: 291px;}
+      .luxery {margin-top: 0; margin-left: 582px;}
+      .sedans>button:hover {color: white;background-color: #E28625;border: 1px solid white;}
+      .suvs>button:hover {color: white;background-color: #006971;border: 1px solid white;}
+      .luxery>button:hover {color: white;background-color: #004140;border: 1px solid white;}
     }
   </style>
 </head>
