@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+
+body{
+    font-family: 'Red Hat Display', serif;
+    font-weight: 500;
+    margin: 0 auto
+}
+.container{
+    overflow: hidden;
+}
+.hero-mobile{
+    margin-left: -50px;
+    height: auto;
+    width: 125%;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.footermobile{ 
+    background-image: 
+    linear-gradient(
+        rgba(77, 150, 168, 0.8), 
+        rgba(77, 150, 168, 0.8)
+    ),
+    url('assets/mobile/image-footer.jpg');
+    width: 100%;
+    height: 428px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.footermobile>h2{ 
+    font-weight: 900;
+    width: 325px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 32px;
+}
+.footermobile>p:first-of-type{ 
+    font-weight: 500;
+    width: 325px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.footermobile a{ 
+	background-color:#855FB1;
+	border-radius:42px;
+	display:flex;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:20px 2px;
+	text-decoration:none;
+    text-align:center;
+    justify-content: center;
+    margin-top: 25px;
+    width: 193px;
+    font-weight: 500;
+    font-family: 'Red Hat Display', serif;
+}
+.footermobile a span{
+    margin-left:8px;
+    color: #D9B8FF;
+}
+
+.line{
+height: 84px;
+width: 1px;
+background-color: #87879d;
+}
+.circle{
+height: 56px;
+width: 56px;
+border-radius: 50%;
+border: 1px solid #87879d;
+text-align: center;
+line-height: 56px;
+background-color: #ffffff;
+color:#87879d;
+}
+.divider{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-bottom: -28px;
+}
