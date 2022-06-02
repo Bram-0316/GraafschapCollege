@@ -10,15 +10,18 @@ $password = "";
 $id = 0;
 $update = false;
 
-if (isset($_POST['save'])) 
-{
+if (isset($_POST['save'])) {
+
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $admin = 0;
 
     $db->query("INSERT INTO `users`(`id`, `firstName`, `lastName`, `email`, `password`) VALUES ('', '$firstName', '$lastName', '$email', '$password')");
     $_SESSION['message'] = "User saved";
+
+
     header('location: index.php');
 }
 
@@ -43,3 +46,7 @@ if (isset($_GET['del'])) {
     $_SESSION['message'] = "User deleted!";
     header('location: index.php');
 }
+
+
+//    $mailcontent = "Hallo,\nEr is een nieuwe gebruiker toegevoegt.";
+    // mail("Bramboudewijn2004@gmail.com", "Order", $mailcontent, "From: pcwinkel123@gmail.com");

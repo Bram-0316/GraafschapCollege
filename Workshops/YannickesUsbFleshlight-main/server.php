@@ -1,6 +1,6 @@
 <?php
 session_start();
-$db = new mysqli('localhost', 'root', '', 'gc_festival');
+$db = new mysqli('localhost', 'root', '', 'registratiemevrouw');
 
 // initialize variables
 $firstName = "";
@@ -9,9 +9,10 @@ $email = "";
 $password = "";
 $id = 0;
 $update = false;
+$opdracht = "";
 
-if (isset($_POST['save'])) 
-{
+if (isset($_POST['save'])) {
+
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
@@ -42,4 +43,10 @@ if (isset($_GET['del'])) {
 
     $_SESSION['message'] = "User deleted!";
     header('location: index.php');
+}
+
+if (isset($_GET['TicketSave'])) {
+    $opdracht = $_GET['OpdrachtSave'];
+
+    $db->query("INSERT INTO `tickets` (firstName, lastName, tickets) VALUES ('$firstName', '$lastName', '$opdracht')");
 }

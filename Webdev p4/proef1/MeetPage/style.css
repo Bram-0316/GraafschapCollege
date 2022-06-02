@@ -7,15 +7,71 @@ body{
 }
 .container{
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .hero-mobile{
-    margin-left: -50px;
+    margin-left: -20px;
     height: auto;
-    width: 125%;
+    width: 110%;
+}
+.hero-desktop{
+    display: none;
 }
 .logo{
     display: flex;
     justify-content: center;
+    margin-bottom: 54px;
+}
+header{
+    margin-top: 48px;
+}
+.headerbuttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64px;
+    flex-direction: column;
+    align-items: center;
+}
+.download{
+	background-color:#4d96a9;
+	border-radius:42px;
+	display:flex;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:16px;
+	padding:20px 2px;
+	text-decoration:none;
+    text-align:center;
+    width: 193px;
+    justify-content: center;
+    margin-top: 25px;
+    font-weight: 900;
+    font-family: 'Red Hat Display', serif;
+}
+.download span{
+    color: rgba(143, 227, 249);
+    margin-left: 5px;
+}
+
+.WhatIsIt{
+    background-color:#855FB1;
+	border-radius:42px;
+	display:flex;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:20px 2px;
+	text-decoration:none;
+    text-align:center;
+    justify-content: center;
+    margin-top: 16px;
+    width: 139px;
+    font-weight: 900;
+    font-family: 'Red Hat Display', serif;
 }
 .footermobile{ 
     background-image: 
@@ -27,7 +83,7 @@ body{
     width: 100%;
     height: 428px;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     color: white;
     display: flex;
    align-items: center;
@@ -59,7 +115,6 @@ body{
 	display:flex;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
 	font-size:16px;
 	padding:20px 2px;
 	text-decoration:none;
@@ -73,6 +128,13 @@ body{
 .footermobile a span{
     margin-left:8px;
     color: #D9B8FF;
+}
+.footercontent{
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .line{
@@ -96,4 +158,206 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 margin-bottom: -28px;
+}
+
+.overline{
+    font-family: 'Red Hat Display', serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: #4d96a9;
+    display: flex;
+    display: flex;
+    justify-content:center;
+    margin: 10px;
+}
+.bodytext{
+    font-family: 'Red Hat Display', serif;
+    font-weight: 500;
+    text-align: center;
+    color: #87879d;
+    display: flex;
+    justify-content:center;
+    margin: 10px;
+}
+.texth2{
+    font-family: 'Red Hat Display', serif;
+    font-weight: 900;
+    font-size: 32px;
+    text-align: center;
+    color: black;
+    display: flex;
+    justify-content:center;
+    margin: 10px;
+}
+.text1{
+    display: flex;
+    justify-content:center;
+    margin: 30px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 540px;
+}
+.collection{
+    width: 100%;
+    height: 50%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.image1{
+    background-image: url('assets/desktop/image-woman-in-videocall.jpg');
+    height: 40%;
+    width: 40%;
+    background-size: cover;
+    float: left;
+    border-radius: 5%;
+    margin: 5px
+}
+.image2{
+    background-image: url('assets/desktop/image-women-videochatting.jpg');
+    height: 40%;
+    width: 40%;
+    background-size: cover;
+    float: left;
+    border-radius: 5%;
+    margin: 5px
+}
+.image3{
+    background-image: url('assets/desktop/image-men-in-meeting.jpg');
+    height: 40%;
+    width: 40%;
+    background-size: cover;
+    float: left;
+    border-radius: 5%;
+    margin: 5px
+}
+.image4{
+    background-image: url('assets/desktop/image-man-texting.jpg');
+    height: 40%;
+    width: 40%;
+    backgrond-size: cover; 
+    float: left;
+    border-radius: 5%;
+    margin: 5px
+}
+.imagescontainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.maintitle{
+    font-family: 'Red Hat Display', serif;
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+}
+.mainpara{
+    font-family: 'Red Hat Display', serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #87879d;
+    width: 327px;
+}
+.logo{
+    margin-top: 80px;
+    margin-bottom: 61px;
+}
+@media (min-width: 768px) {
+    .headerbuttons {
+        flex-direction: row;
+    }
+    .download{
+        margin-top: 15px;
+        margin-right: 16px;
+    }
+    .maintitle{
+        width: 339px;
+        font-size: 48px;
+    }
+    .title{
+        width: 457px;
+    }
+    .collection{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 156px;
+    }
+    .desktopHeader{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .image1{
+     height: 90%;   
+    }
+    .image2{
+    height: 90%;
+    }
+    .image3{
+    height: 90%;
+    }
+    .image4{
+    height: 90%;    
+    width
+    }
+
+    .imagescontainer .collection{
+        max-width:689px;
+        max-height:242px;
+       }
+}
+
+@media (min-width: 1440px){
+    .hero-mobile{
+        display: none;
+    }
+    .hero-desktop-left{
+        display:flex;
+        margin-top: -150px;
+    }
+    .hero-desktop-right{
+        display:flex;
+        width: 394px;
+        height: 303px;
+    }
+    .desktopHeader{
+        display:flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 110%;
+    }
+    .collection{
+        max-width: 1110px;
+    }
+    .footercontent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 1110px;
+        max-height: 88px;
+    }
+    .footerP{
+        max-width: 350px;
+        margin: 0 60px 0 60px;
+    }
+    .downloadbutton{
+        margin-top: -20px;
+    }
+    .imagescontainer .collection{
+        max-width:1110px;
+        min-height:265px;
+       }
 }
